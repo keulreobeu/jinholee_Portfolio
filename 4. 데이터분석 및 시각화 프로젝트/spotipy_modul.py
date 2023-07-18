@@ -8,13 +8,13 @@ import pprint
 
 
 # key_1
-# client_credentials_manager = SpotifyClientCredentials(client_id='e48676801c514fd0a6202eb890eaa0f1', client_secret='14d81002649d483f9002f027f575a80d')
+# client_credentials_manager = SpotifyClientCredentials(client_id='e48676801c514fd0a6202eb890eaa0f1', client_secret='발급받은 키')
 
 # key_2
-# client_credentials_manager = SpotifyClientCredentials(client_id='5022af45601e4149a0881fbbe27eef62', client_secret='e8927574ef474d15aec854bcdbb6894d')
+# client_credentials_manager = SpotifyClientCredentials(client_id='5022af45601e4149a0881fbbe27eef62', client_secret='발급받은 키')
 
 # key_3
-client_credentials_manager = SpotifyClientCredentials(client_id='f588ee129cec4da4a194ece6210ffab6', client_secret='87a162c57c234a43abb6e604c7da8c2c')
+client_credentials_manager = SpotifyClientCredentials(client_id='f588ee129cec4da4a194ece6210ffab6', client_secret='발급받은 키')
 
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
