@@ -33,9 +33,9 @@ $python = (Resolve-Path ../../.venv/Scripts/python.exe).Path
 다음은 **입력 준비 후 실행하는 안내**입니다. 저장소 clone에 원본 DB·검수 패키지·모델이 들어 있다고 가정하지 않습니다. `BATCH` 등은 준비한 경로로 바꿉니다. 실제 API 수집 명령은 자동 실행하지 않습니다.
 
 ```powershell
-python -m budongi.cli collection status --directory data/collection/BATCH
-python -m budongi.cli collection build-db --directory data/collection/BATCH --output data/collection/BATCH/db-new
-python -m budongi.cli collection integrate --directory data/collection/BATCH --db-directory data/collection/BATCH/db-new --output data/collection/BATCH/canonical-new
+& $python -m budongi.cli collection status --directory data/collection/BATCH
+& $python -m budongi.cli collection build-db --directory data/collection/BATCH --output data/collection/BATCH/db-new
+& $python -m budongi.cli collection integrate --directory data/collection/BATCH --db-directory data/collection/BATCH/db-new --output data/collection/BATCH/canonical-new
 ```
 
 원본 해시·manifest·출처/지역/월 범위가 일치해야 합니다. 실제 추천 serving은 원본 canonical에 더해 승인된 검수 관계/좌표/시설/커버리지 패키지가 필요합니다. 정확한 옵션과 형식은 고정 commit의 [검수 패키지 안내](https://github.com/keulreobeu/jipdam/blob/dfd65523de303d060c2bb1c1b5102730feeeaff9/outputs/budongi_mvp_temp/docs/rental-review-package.md)를 따릅니다. 준비되지 않으면 `data_not_ready`가 정상입니다.
